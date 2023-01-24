@@ -1,0 +1,43 @@
+section {
+	height: 100%;
+	background-color: #a1ccdf;
+}
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: inline-block;
+	transform: translate(-50%, -50%);
+}
+p > span {
+	display: inline-block;
+}
+p > span:first-child {
+	display: block;
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 600;
+}
+p > .en {
+	color: #fff;
+	font-size: 7em;
+}
+
+@media (max-width: 1200px) {
+	body, button, input {
+		font-size: 9px;
+	}
+	p > .en {
+		font-size: 6em;
+	}
+}
+@media (max-width: 800px) {
+	body, button, input {
+		font-size: 8px;
+	}
+}
+@media (max-width: 500px) {
+	body, button, input {
+		font-size: 7px;
+	}
+}

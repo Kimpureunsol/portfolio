@@ -1,0 +1,333 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* { margin: 0; padding: 0;}
+li { list-style: none; }
+address { font-style: normal; }
+a { text-decoration: none; color: #666;}
+button { font-family: "Noto Sans KR", sans-serif; }
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	font-size: 14px;
+	color: #666;
+}
+#wrap {
+	width: 100%;
+	min-width: 1400px;
+}
+section {
+	padding: 80px 0;
+}
+.inner {
+	position: relative;
+}
+.inner, .foot-in {
+	width: 98%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.tit-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*background-color: pink;*/
+}
+h2 {
+	color: #111;
+	font-size: 60px;
+	font-weight: 700;
+}
+h2 + p {
+	color: #111;
+	font-size: 20px;
+	margin: 1em 0 2em;
+}
+p + a {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	width: 188px;
+	height: 50px;
+	padding-left: 1em;
+	border: 1px solid #111;
+	margin-bottom: 2em;
+	color: #111;
+	font-size: 16px;
+	font-weight: 400;
+}
+p + a > span::after {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 17px;
+	margin-left: 40px;
+	background: url(../study/img/common.png) no-repeat -90px -199px;
+}
+.tit-box > ul {
+	display: flex;
+	justify-content: space-between;
+	width: 180px;
+}
+.tit-box > ul li {
+	position: relative;
+	width: 50%;
+	text-align: center;
+	opacity: 0.7;
+}
+.tit-box > ul li:hover {
+	opacity: 1;
+}
+.tit-box > ul > li:first-child::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: inline-block;
+	width: 1px;
+	height: 50px;
+	background-color: #ccc;
+}
+.tit-box > ul span::before {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../study/img/common.png) no-repeat -202px -70px;
+}
+.text-box {
+	background-color: yellow;
+}
+
+.text-box > ul {
+	width: 950px;
+	border-top: 2px solid #111;
+	margin-left: auto;
+}
+.text-box > ul > li {
+	border-bottom: 1px solid #ccc;
+}
+.text-box > ul > li > a {
+	display: flex;
+	align-items: center;
+	padding: 0.8em;
+}
+.text-box > ul > li > a:hover p {
+	text-decoration: underline;
+}
+.date {
+	text-align: center;
+}
+.date > span:first-child {
+	font-size: 40px;
+	display: block;
+}
+.date > span:last-child {
+	font-size: 14px;
+}
+.text-box li > a > span {
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	margin: 0 1em 0 2em;
+	background-color: #746661;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: bottom;
+}
+.text-box li > a > span.n {
+	background-color: #a72b2a;
+}
+.text-box li > a > p {
+	overflow: hidden;
+	display: inline-block;
+	width: 715px;
+	color: #111;
+	font-size: 24px;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+
+
+
+
+.text-box > table {
+	width: 950px;
+	border-top: 2px solid #333;
+	margin-left: auto;
+}
+/*.date {
+	display: block;
+	font-size: 40px;
+}*/
+td {
+	padding: 1.2em;
+	border-bottom: 1px solid #ccc;
+}
+td:last-child {
+	padding-left: 0;
+	color: #111;
+	font-size: 20px;
+}
+td:last-child > span::before {
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	margin-right: 6px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: bottom;
+}
+.notice > span::before {
+	content: "Notice";
+	background-color: #a72b2a;
+}
+.news > span::before {
+	content: "News";
+	background-color: #746661;
+}
+td a {
+	overflow: hidden;
+	display: inline-block;
+	width: 715px;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+td a:hover {
+	/*font-weight: 700;*/
+	text-decoration: underline;
+}
+footer {
+	width: 100%;
+	min-width: 1400px;
+	background-color: #efefef;
+}
+.foot-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 21px 0;
+	border-bottom: 1px solid #ccc;
+}
+.foot-top > .left {
+	/*background-color: beige;*/
+}
+.foot-top > ul {
+	overflow: hidden;
+	/*padding-top: 12px;*/
+	/*float 처리한 li들이 ul에서 빠져나오는데? 이를 막아주기 위한..?*/
+}
+.foot-top li {
+	float: left;
+	/*inline-block시 생기는 여백 없애려고 사용*/
+	display: inline-block;
+	margin-right: 1.8em;
+}
+.foot-top > .right {
+	/*clear: both;*/
+	/*얘가 딸려올라오지 않게 clear 처리함*/
+	overflow: hidden;
+	/*background-color: green;*/
+}
+.foot-top > .right > a {
+	float: left;
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	margin-left: 1.8em;
+	color: #fff;
+	background-color: #666;
+	text-align: center;
+	line-height: 40px;
+}
+.foot-top > .right > .fmc {
+	background-color: #a72b2a;
+}
+.foot-top strong {
+	color: #a72b2a;
+	text-decoration: underline;
+}
+.foot-bot {
+	padding: 30px 0 50px;
+}
+.foot-box {
+	display: flex;
+	justify-content: space-between;
+}
+.foot-bot p:first-child {
+	width: 155px;
+	height: 30px;
+	margin-bottom: 1rem;
+	background: url(../study/img/common.png) no-repeat 0 -120px;
+	text-indent: -9999px;
+}
+address > span::after {
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 10px;
+	margin-left: 6px;
+	background-color: #666;
+}
+address span:last-child::after {
+	display: none;
+}
+.foot-bot p:last-child {
+	line-height: 2;
+}
+.btn-box {
+	position: relative;
+	width: 330px;
+	background-color: blue;
+}
+.btn-box > button {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #ccc;
+	padding: 0 1em;
+	background-color: #fff;
+	text-align: left;
+	cursor: pointer;
+}
+.btn-box > button > span::after {
+	content: "";
+	position: absolute;
+	top: 22px;
+	right: 1em;
+	width: 19px;
+	height: 14px;
+	background: url(../study/img/common.png) no-repeat -168px -87px;
+	color: #ccc;
+}
+.btn-box .dropdown-list {
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	box-sizing: border-box;
+	display: none;
+	width: 100%;
+	padding: 0 1em;
+	border: 1px solid #ccc;
+	margin-bottom: -1px;
+	background-color: #fff;
+}
+.dropdown-list > li {
+	line-height: 3;
+}
+.btn-box.on > button > span::after {
+	top: 17px;
+	transform: rotate(180deg);
+}
+.btn-box.on .dropdown-list {
+	display: block;
+}

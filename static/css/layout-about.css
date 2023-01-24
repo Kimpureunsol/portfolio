@@ -1,0 +1,209 @@
+.inner {
+	padding: 200px 0;
+}
+.inner,
+.right-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.left-box {
+    width: 35%;
+	padding-right: 6em;
+	border-right: 1px solid #e5e5e5;
+}
+.right-box {
+	width: 60%;
+	padding-left: 6em;
+}
+.right-box > figure {
+	width: 40%;
+}
+.right-box > div {
+	width: 50%;
+}
+h3.en {
+    margin-bottom: 10px;
+    color:#a1ccdf;
+    font-size: 2em;
+}
+h3::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #e5e5e5;
+}
+.about-me-des {
+	margin-left: 16px;
+}
+.intro-tit {
+	margin-bottom: 2em;
+	font-size: 3em;
+	font-weight: 600;
+}
+.txt-box {
+    font-size: 1.8em;
+}
+.txt-box:nth-child(3) {
+	margin: 2em 0;
+}
+.txt-box > span {
+	display: block;
+}
+figure > img {
+	width: 250px;
+	margin-bottom: 20px;
+}
+.profile li {
+	font-size: 1.6em;
+	margin-bottom: 6px;
+}
+.profile li:last-child {
+	margin-bottom: 0;
+}
+.profile .profile-info {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 60px;
+	margin-right: 20px;
+	font-weight: 600;
+}
+.skill-box dl {
+	margin-bottom: 2.5em;
+}
+.skill-box dl:last-child {
+	margin-bottom: 0;
+}
+.skill-box dt,
+.skill-box dd {
+	font-size: 1.6em;
+}
+.skill-box dt {
+	margin-bottom: 0.5em;
+	font-weight: 600;
+}
+
+@media (max-width: 1480px) {
+	body, button, input {
+		font-size: 9px;
+	}
+	.intro-tit {
+		font-size: 2.6em;
+	}
+	figure > img {
+		width: 220px;
+	}
+}
+@media (max-width: 1230px) {
+	body, button, input {
+		font-size: 8px;
+	}
+	.title-box {
+		height: 500px;
+	}
+	.title-txt {
+		padding-top: 320px;
+	}
+	figure > img {
+		width: 200px;
+	}
+}
+@media (max-width: 1060px) {
+	.title-txt > h2 {
+		font-size: 4em;
+	}
+	.inner {
+		padding: 100px 0;
+	}
+	.left-box {
+		width: 55%;
+		padding-right: 0;
+		border: transparent;
+	}
+	.right-box {
+		flex-direction: column;
+		width: 45%;
+	}
+	.right-box > figure,
+	.right-box > div {
+		width: 100%;
+	}
+	figure {
+		margin-bottom: 20px;
+	}
+	figure > img {
+		width: 140px;
+	}
+	.skill-box .about-me-des {
+		overflow: hidden;
+	}
+	.skill-box dl {
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+	.skill-box dt {
+		padding: 3px 6px;
+		border: 1px solid #e5e5e5;
+		border-radius: 5px;
+		font-size: 1em;
+		font-weight: 400;
+	}
+	.skill-box dd {
+		display: none;
+	}
+}
+@media (max-width: 690px) {
+	.right-box {
+		padding-left: 4em;
+	}
+	.txt-box > span {
+		display: inline;
+	}
+}
+@media (max-width: 540px) {
+	.title-box {
+		position: relative;
+		height: 300px;
+	}
+	.title-txt {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+		padding-top: 0;
+	}
+	.inner {
+		position: relative;
+		flex-direction: column;
+		margin-top: 120px;
+		padding: 200px 0 100px;
+	}
+	.left-box {
+		width: 100%;
+	}
+	.right-box {
+		width: 100%;
+		padding-left: 0;
+		margin: 20px 0;
+	}
+	figure > img {
+		position: absolute;
+		top: -20px;
+		left: 0;
+	}
+	.intro-tit {
+		margin-bottom: 1em;
+		font-size: 2.2em;
+	}
+	.txt-box > span {
+		display: block;
+	}
+	.txt-box:nth-child(3) {
+		margin: 1em 0;
+	}
+}

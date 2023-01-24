@@ -1,0 +1,153 @@
+.inner {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 200px 0;
+}
+form {
+    text-align: center;
+}
+form > ul {
+    text-align: left;
+}
+.list-item {
+    margin-bottom: 50px;
+}
+label,
+input,
+textarea {
+    width: 100%;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 1em;
+    font-size: 18px;
+    font-weight: 600;
+}
+label.must::after {
+    content: "*";
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: rgb(255, 0, 0);
+}
+input,
+textarea {
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid #363636;
+    font-size: 16px;
+}
+textarea.agree-area {
+    min-height: 120px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    resize: none;
+}
+textarea.content-area {
+    min-height: 180px;
+    resize: none;
+}
+input:focus,
+textarea.content-area:focus {
+    outline: 2px solid #111;
+    border-bottom: none;
+    border-radius: 5px;
+}
+.check-btn > input {
+	display: none;
+}
+.check-btn > label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+	background-color: #767676;
+	color: #fff;
+	font-size: 14px;
+    font-weight: 300;
+	cursor: pointer;
+}
+.check-btn > label::before {
+	content: "\ea0e";
+	font-family: 'xeicon';
+	margin-right: 10px;
+}
+.check-btn > input:checked + label {
+	background-color: #a1ccdf;
+}
+.check-btn > input:checked + label::before {
+	content: "\e928";
+}
+.list-btn {
+    width: 210px;
+    height: 70px;
+    margin-top: 50px;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+}
+.list-btn:hover {
+    background-color: #a1ccdf;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+@media (max-width: 1480px) {
+	body {
+		font-size: 9px;
+	}
+}
+@media (max-width: 1230px) {
+	body {
+		font-size: 8px;
+	}
+	.title-box {
+		height: 500px;
+	}
+	.title-txt {
+		padding-top: 320px;
+	}
+}
+@media (max-width: 1060px) {
+	.title-txt > h2 {
+		font-size: 4em;
+	}
+	.inner {
+		padding: 100px 0;
+	}
+    label,
+    input,
+    textarea,
+    .list-btn {
+        font-size: 14px;
+    }
+    .check-btn > label {
+        font-size: 12px;
+    }
+}
+@media (max-width: 540px) {
+	.title-box {
+		position: relative;
+		height: 300px;
+	}
+	.title-txt {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+		padding-top: 0;
+	}
+    textarea.content-area {
+        min-height: 140px;
+    }
+    .list-btn {
+        margin-top: 0;
+    }
+}

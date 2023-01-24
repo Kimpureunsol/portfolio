@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="안녕하세요! 미니멀리즘을 지향하는 웹 퍼블리셔 김푸른솔의 포트폴리오입니다.">
+    <meta name="Keywords" content="웹 퍼블리셔, 김푸른솔, 포트폴리오">
+    <meta property="og:site_name" content="김푸른솔 | 웹 퍼블리셔 포트폴리오">
+    <meta property="og:title" content="김푸른솔 | 웹 퍼블리셔 포트폴리오">
+    <meta property="og:description" content="안녕하세요! 미니멀리즘을 지향하는 웹 퍼블리셔 김푸른솔의 포트폴리오입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:title" content="김푸른솔 | 웹 퍼블리셔 포트폴리오">
+    <meta name="twitter:description" content="안녕하세요! 미니멀리즘을 지향하는 웹 퍼블리셔 김푸른솔의 포트폴리오입니다.">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">  
+    <link rel="canonical" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/total.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/layout-contact.css"> 
+    <title>김푸른솔 | 웹 퍼블리셔 포트폴리오</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../statoc/js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><span>김푸른솔 포트폴리오</span></a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="about.html" class="en">About me</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="en">Portfolio</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="en">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        $(window).scroll(function() {
+            const scrollT = $(window).scrollTop();
+            $("header").addClass("on");
+            if(scrollT == 0) {
+                $("header").removeClass("on");
+            };
+        });
+    </script>
+    <section class="title-box">
+        <div class="title-txt">
+            <h2 class="en">Contact</h2>
+            <span>궁금한 점은 여기로 연락주세요 :)</span>
+        </div>
+    </section>
+    <section>
+        <div class="inner">
+            <form action="#" name="contact-list" method="post">
+                <ul>
+                    <li class="list-item">
+                        <label for="user-name" class="must">이름</label>
+                        <input type="text" id="user-name">
+                    </li>
+                    <li class="list-item">
+                        <label for="user-email">연락처</label>
+                        <input type="numver" id="user-email" placeholder="숫자만 입력하세요.">
+                    </li>
+                    <li class="list-item">
+                        <label for="user-email" class="must">메일</label>
+                        <input type="email" id="user-email">
+                    </li>
+                    <li class="list-item">
+                        <label for="user-textarea" class="must">내용</label>
+                        <textarea id="user-textarea" class="content-area"></textarea>
+                    </li>
+                    <li class="list-item">
+                        <label for="user-agree" class="must">개인정보수집동의</label>
+                        <textarea id="user-agree" class="agree-area" readonly>1. 수집 목적 : 내용 확인 및 회신&#10;2. 수집 항목 : 이름, 이메일&#10;3. 보유 기간 : 메일 회신 후 즉시 폐기</textarea>
+                        <span class="check-btn">
+                            <input type="checkbox" id="agree">
+                            <label for="agree">개인정보 수집에 동의합니다.</label>
+                        </span>
+                    </li>
+                </ul>
+                <button type="button" class="list-btn">보내기</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
