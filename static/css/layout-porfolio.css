@@ -1,121 +1,156 @@
 .inner {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	padding-left: 5%;
-}
-.kolmar {
-	background-color: #0055ab;
-	color: #fff;
-}
-.plac {
-	background-color: #d3ccb7;
-	color: #740e0e;
-}
-.kolmar > div,
-.plac > div {
 	position: relative;
 }
-.pf-des-box {
-	width: 100%;
+h3 {
+	margin-bottom: 50px;
+    color: #a1ccdf;
+	font-size: 3.2em;
+	font-weight: 600;
 }
-.pf-des-box h2 {
-	font-size: 3em;
-	font-weight: 500;
+h3::before {
+	content: "";
+    display: inline-block;
+    width: 5px;
+    height: 26px;
+    margin-right: 10px;
+    background-color: #e5e5e5;
 }
-.pf-des-box .en {
-	display: block;
-	font-size: 2em;
+.swiper {
+	position: static;
 }
-.pf-des-box .pf-des {
-	margin: 6em 0 4em 0;
-	font-size: 2em;
+figure,
+figcaption {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
-.pf-des-box dl {
-	margin-bottom: 1.5em;
+figcaption {
+	font-size: 1.8em;
+	justify-content: flex-start;
 }
-.pf-des-box dt {
-	width: 74px;
-	margin-right: 1.2em;
+figcaption > div:first-child {
+	margin-right: 20px;
 }
-.pf-des-box dt,
-.pf-des-box dd {
+.page-type {
 	display: inline-block;
-}
-.view-btn {
-	width: 140px;
-	height: 40px;
-	border: 1px solid #fff;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
 	border-radius: 5px;
+	background-color: #a1ccdf;
 	color: #fff;
-	font-size: 1.6em;
-	line-height: 40px;
 	text-align: center;
 }
-.view-btn:first-of-type {
-	margin-right: 1em;
+h4 {
+	font-size: 1.3em;
+	font-weight: 700;
 }
-.view-btn:hover {
-	background-color: #fff;
-	color: #363636;
-	font-weight: 500;
-	transition: 0.5s;
+.page-des {
+	margin: 40px 0;
 }
-.plac .view-btn {
-	border-color: #740e0e;
-	color: #740e0e;
-}
-.plac .view-btn:hover {
-	background-color: #740e0e;
-	color: #fff;
-}
-.pf-img {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 65%;
-}
-.plac .pf-img {
-	right: -4%;
+img {
+	width: 600px;
 }
 .pf-img-app {
 	position: absolute;
-	z-index: 2;
-	top: 35%;
-    left: -20%;
-    width: 60%;
+    bottom: 50px;
+    right: 480px;
+    width: 100px;
+}
+dl {
+	margin-bottom: 10px;
+}
+dt {
+	width: 74px;
+	margin-right: 10px;
+	display: inline-block;
+}
+dd {
+	display: inline-block;
+}
+.view-btn {
+	width: 100px;
+	height: 30px;
+	margin: 20px 10px 0 0;
+	line-height: 30px;
+	border-radius: 5px;
+	background-color: #e5e5e5;
+	color: #363636;
+	font-size: 0.8em;
+	text-align: center;
+}
+.view-btn:hover {
+	background-color: #a1ccdf;
+	color: #fff;
+	font-weight: 500;
+	transition: 0.5s;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	top: auto;
+	bottom: 160px;
+	width: 20px;
+	height: 20px;
+	color: #767676;
+}
+.swiper-button-next {
+	right: auto;
+	left: 110px;
+}
+.swiper-button-prev {
+	left: 90px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-family: "xeicon";
+	font-size: 24px;
+}
+.swiper-button-next::after {
+	content: "\e93f";
+}
+.swiper-button-prev::after {
+	content: "\e93c";
 }
 
-@media (max-width: 1200px) {
-	body, button, input {
-		font-size: 9px;
-	}
-	.view-btn:hover {
-		background-color: transparent;
-		color: #fff;
-		font-weight: 400;
-	}
-	.plac .view-btn:hover {
-		background-color: transparent;
-		color: #740e0e;
-	}
-	.plac .pf-img {
-		right: -8%;
-	}
-}
-@media (max-width: 860px) {
-	body, button, input {
-		font-size: 8px;
-	}
-	.pf-des-box {
-		width: 100%;
-	}
-	.pf-img {
+@media (max-width: 1230px) {
+	img,
+	.pf-img-app {
 		display: none;
 	}
+	.view-btn:hover {
+		background-color: #e5e5e5;
+		color: #363636;
+		font-weight: 400;
+	}
 }
-@media (max-width: 500px) {
-	body, button, input {
-		font-size: 7px;
+@media (max-width: 1080px) {
+	.inner {
+		padding: 100px 0 160px;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		bottom: 100px;
+	}
+}
+@media (max-width: 540px) {
+	h3 {
+		margin-bottom: 30px;
+		font-size: 2.6em;
+	}
+	.page-des {
+		margin: 20px 0;
+	}
+	figcaption {
+		flex-direction: column;
+	}
+	figcaption > div:first-child {
+		margin-bottom: 20px;
+	}
+	.swiper-button-next {
+		left: 20px;
+	}
+	.swiper-button-prev {
+		left: 0;
 	}
 }

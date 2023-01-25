@@ -7,15 +7,16 @@ header {
     width: 100%;
 	height: 70px;
 	padding: 0 40px;
+	background-color: #fff;
     z-index: 10;
 }
-header.on {
-	background-color: #a1ccdf;
+header.scr {
+	border-bottom: 1px solid #e5e5e5;
 }
 h1 > a {
-	width: 40px;
-	height: 40px;
-	background: url(../img/logo.png) no-repeat 0 0 / 100%;
+	width: 30px;
+	height: 30px;
+	background: url(../img/logo-on.png) no-repeat 0 0 / 100%;
 }
 h1 span {
 	font-size: 0;
@@ -32,20 +33,83 @@ nav > ul > li > a {
 	height: 70px;
 	line-height: 70px;
 }
-nav .depth {
-	position: absolute;
-	top: 70px;
-	opacity: 0;
-	transition: 0.5s;
-}
-nav .depth.on {
-	opacity: 1;
-}
-nav .depth li:first-of-type {
-	padding-bottom: 20px;
-}
-header .en {
-	color: #fff;
+header .en,
+.hbg-btn-menu .en {
+	color: #a1ccdf;
 	font-size: 16px;
 	font-weight: 600;
+}
+.hbg-btn {
+	display: none;
+	z-index: 20;
+}
+.hbg-btn > span {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	background-color: #a1ccdf;
+	vertical-align: middle;
+	font-size: 0;
+}
+.hbg-btn > span::before,
+.hbg-btn > span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #a1ccdf;
+	transition: transform 0.5s;
+}
+.hbg-btn > span::before {
+	top: 6px;
+}
+.hbg-btn > span::after {
+	bottom: 6px;
+}
+.hbg-btn.on > span {
+	background-color: transparent;
+}
+.hbg-btn.on > span::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.hbg-btn.on > span::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+.hbg-btn-menu {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 200px;
+	height: 100vh;
+	background-color: #fff;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.hbg-btn-menu.on {
+	opacity: 1;
+}
+.hbg-btn-menu li {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+@media (max-width: 1230px) {
+	header {
+		height: 50px;
+		padding: 0 20px;
+	}
+	h1 > a {
+		width: 20px;
+		height: 20px;
+	}
+	nav {
+		display: none;
+	}
+	.hbg-btn {
+		display: block;
+	}
 }

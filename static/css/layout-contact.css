@@ -1,8 +1,5 @@
 .inner {
     max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 200px 0;
 }
 form {
     text-align: center;
@@ -98,29 +95,14 @@ textarea.content-area:focus {
     transition: 0.5s;
 }
 
-@media (max-width: 1480px) {
-	body {
-		font-size: 9px;
-	}
-}
 @media (max-width: 1230px) {
-	body {
-		font-size: 8px;
-	}
-	.title-box {
-		height: 500px;
-	}
-	.title-txt {
-		padding-top: 320px;
-	}
+    .list-btn:hover {
+        background-color: #fff;
+        color: #363636;
+        font-weight: 400;
+    }
 }
-@media (max-width: 1060px) {
-	.title-txt > h2 {
-		font-size: 4em;
-	}
-	.inner {
-		padding: 100px 0;
-	}
+@media (max-width: 1080px) {
     label,
     input,
     textarea,
@@ -132,22 +114,15 @@ textarea.content-area:focus {
     }
 }
 @media (max-width: 540px) {
-	.title-box {
-		position: relative;
-		height: 300px;
-	}
-	.title-txt {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: auto;
-		padding-top: 0;
-	}
     textarea.content-area {
         min-height: 140px;
     }
+    .check-btn > label {
+        height: 50px;
+    }
     .list-btn {
+        width: 140px;
+        height: 50px;
         margin-top: 0;
     }
 }

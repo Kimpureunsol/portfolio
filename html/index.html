@@ -49,6 +49,40 @@
                 </li>
             </ul>
         </nav>
+        <button type="button" class="hbg-btn">
+            <span>햄버거버튼</span>
+        </button>
+        <div class="hbg-btn-menu">
+            <ul>
+                <li>
+                    <a href="about.html" class="en">About me</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="en">Portfolio</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="en">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        $(window).scroll(function() {
+            const scrollT = $(window).scrollTop();
+            $("header").addClass("scr");
+            $(".hbg-btn").addClass("scr");
+            if(scrollT == 0) {
+                $("header").removeClass("scr");
+                $(".hbg-btn").removeClass("scr");
+            };
+        });
+
+        $(".hbg-btn").click(function() {
+            $(this).toggleClass("on");
+            $(".hbg-btn-menu").toggleClass("on");
+            $("body").toggleClass("on");
+        });
+    </script>
     </header>
     <section>
         <p>

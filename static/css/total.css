@@ -9,6 +9,15 @@ body, button, label, input, textarea {
 	word-break: keep-all;
 	line-height: 1.6;
 }
+body.on::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
 .en {
 	font-family: "Noto Serif", serif;
 	font-weight: 700;
@@ -41,10 +50,48 @@ img {
 	max-width: 1600px;
     width: 90%;
     margin: 0 auto;
+	padding: 200px 0;
 }
 
+@media (max-width: 1480px) {
+	body, button, label, input, textarea {
+		font-size: 9px;
+	}
+}
+@media (max-width: 1230px) {
+	body, button, label, input, textarea {
+		font-size: 8px;
+	}
+	.title-box {
+		height: 500px;
+	}
+	.title-txt {
+		padding-top: 320px;
+	}
+}
+@media (max-width: 1080px) {
+	.title-txt > h2 {
+		font-size: 4em;
+	}
+	.inner {
+		padding: 100px 0;
+	}
+}
 @media (max-width: 540px) {
-	.title-txt > span {
-		display: none;
+	.title-txt > h2 {
+		font-size: 3.5em;
+	}
+	.title-box {
+		position: relative;
+		height: 300px;
+	}
+	.title-txt {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+		padding-top: 0;
+		text-align: center;
 	}
 }
