@@ -32,6 +32,7 @@
     <title>김푸른솔 | 웹 퍼블리셔 포트폴리오</title>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="../statoc/js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -75,6 +76,7 @@
                 $("header").removeClass("scr");
                 $(".hbg-btn").removeClass("scr");
             };
+            
         });
 
         $(".hbg-btn").click(function() {
@@ -92,23 +94,23 @@
         </section>
         <section>
             <div class="inner">
-                <form action="#" name="contact-list" method="post">
+                <form id="contact-form" method="post">
                     <ul>
                         <li class="list-item">
                             <label for="user-name" class="must">이름</label>
-                            <input type="text" id="user-name">
+                            <input type="text" id="from-name" name="from-name">
                         </li>
                         <li class="list-item">
                             <label for="user-number">연락처</label>
-                            <input type="number" id="user-number" placeholder="숫자만 입력하세요.">
+                            <input type="number" id="user-number" name="user-number" placeholder="숫자만 입력하세요.">
                         </li>
                         <li class="list-item">
                             <label for="user-email" class="must">메일</label>
-                            <input type="email" id="user-email">
+                            <input type="email" id="user-email" name="user-email">
                         </li>
                         <li class="list-item">
                             <label for="user-textarea" class="must">내용</label>
-                            <textarea id="user-textarea" class="content-area"></textarea>
+                            <textarea id="message" name="message" class="content-area"></textarea>
                         </li>
                         <li class="list-item">
                             <label for="user-agree" class="must">개인정보수집동의</label>
@@ -119,10 +121,25 @@
                             </span>
                         </li>
                     </ul>
-                    <button type="button" class="list-btn">보내기</button>
+                    <button type="submit" class="list-btn">보내기</button>
                 </form>
             </div>
         </section>
     </main>
+    <script>
+        (function(){
+            emailjs.init("VJMhmJTxwTMnuoob3");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_ymkhr09', 'template_4e8hsp4', this)
+                .then(function() {
+                    alert('SUCCESS!');
+                }, function(error) {
+                    alert('FAILED...', error);
+                });
+        });
+    </script>
 </body>
 </html>
