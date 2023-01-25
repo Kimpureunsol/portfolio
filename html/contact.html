@@ -83,44 +83,46 @@
             $("body").toggleClass("on");
         });
     </script>
-    <section class="title-box">
-        <div class="title-txt">
-            <h2 class="en">Contact</h2>
-            <span>궁금한 점은 아래로 연락주세요 :)</span>
-        </div>
-    </section>
-    <section>
-        <div class="inner">
-            <form action="#" name="contact-list" method="post">
-                <ul>
-                    <li class="list-item">
-                        <label for="user-name" class="must">이름</label>
-                        <input type="text" id="user-name">
-                    </li>
-                    <li class="list-item">
-                        <label for="user-email">연락처</label>
-                        <input type="numver" id="user-email" placeholder="숫자만 입력하세요.">
-                    </li>
-                    <li class="list-item">
-                        <label for="user-email" class="must">메일</label>
-                        <input type="email" id="user-email">
-                    </li>
-                    <li class="list-item">
-                        <label for="user-textarea" class="must">내용</label>
-                        <textarea id="user-textarea" class="content-area"></textarea>
-                    </li>
-                    <li class="list-item">
-                        <label for="user-agree" class="must">개인정보수집동의</label>
-                        <textarea id="user-agree" class="agree-area" readonly>1. 수집 목적 : 내용 확인 및 회신&#10;2. 수집 항목 : 이름, 이메일&#10;3. 보유 기간 : 메일 회신 후 즉시 폐기</textarea>
-                        <span class="check-btn">
-                            <input type="checkbox" id="agree">
-                            <label for="agree">개인정보 수집에 동의합니다.</label>
-                        </span>
-                    </li>
-                </ul>
-                <button type="button" class="list-btn">보내기</button>
-            </form>
-        </div>
-    </section>
+    <main>
+        <section class="title-box">
+            <div class="title-txt">
+                <h2 class="en">Contact</h2>
+                <span>궁금한 점은 아래로 연락주세요 :)</span>
+            </div>
+        </section>
+        <section>
+            <div class="inner">
+                <form action="#" name="contact-list" method="post">
+                    <ul>
+                        <li class="list-item">
+                            <label for="user-name" class="must">이름</label>
+                            <input type="text" id="user-name">
+                        </li>
+                        <li class="list-item">
+                            <label for="user-number">연락처</label>
+                            <input type="number" id="user-number" placeholder="숫자만 입력하세요.">
+                        </li>
+                        <li class="list-item">
+                            <label for="user-email" class="must">메일</label>
+                            <input type="email" id="user-email">
+                        </li>
+                        <li class="list-item">
+                            <label for="user-textarea" class="must">내용</label>
+                            <textarea id="user-textarea" class="content-area"></textarea>
+                        </li>
+                        <li class="list-item">
+                            <label for="user-agree" class="must">개인정보수집동의</label>
+                            <textarea id="user-agree" class="agree-area" readonly>1. 수집 목적 : 내용 확인 및 회신&#10;2. 수집 항목 : 이름, 이메일&#10;3. 보유 기간 : 메일 회신 후 즉시 폐기</textarea>
+                            <span class="check-btn">
+                                <input type="checkbox" id="agree">
+                                <label for="agree">개인정보 수집에 동의합니다.</label>
+                            </span>
+                        </li>
+                    </ul>
+                    <button type="button" class="list-btn">보내기</button>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

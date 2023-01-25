@@ -1,30 +1,30 @@
-section {
+main {
 	height: 100%;
 	background-color: #a1ccdf;
 }
-p {
+h2 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	display: inline-block;
 	transform: translate(-50%, -50%);
 }
-p > span {
+h2 > span {
 	display: inline-block;
 }
-p > span:first-child {
+h2 > span:first-child {
 	display: block;
 	color: #fff;
 	font-size: 2em;
 	font-weight: 600;
 }
-p > .en {
+h2 > .en {
 	color: #fff;
 	font-size: 6em;
 }
 
 @media (max-width: 1230px) {
-	p > .en {
+	h2 > .en {
 		font-size: 4em;
 	}
 }
